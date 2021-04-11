@@ -15,6 +15,7 @@ body {
 
 main {
     display: grid;
+    grid-template-columns: repeat(auto-fit, 100%);
     /* position: relative; */
 }
 
@@ -59,7 +60,7 @@ main header {
 
 .user-description{
     display: grid;
-    transform: translateY(-75px);
+    transform: translateY(-136px);
 }
 
 .description-top-content{
@@ -70,15 +71,15 @@ main header {
 
 .profile-picture {
     height: 100%;
-    width: 115%;
+    width: 100%;
     border: 4px solid #fff;
     border-radius: 50%;
     /* transform: translateY(-50%); */
 }
 
 .follow-button {
-    width: 14%;
-    height: 40%;
+    width: 19%;
+    height: 28%;
     justify-self: right;
     color: #1da1f2;
     font-size: 15px;
@@ -87,7 +88,7 @@ main header {
     background-color: #fff;
     border: 1px solid #1da1f2;
     border-radius: 50px;
-    /* transform: translateY(-350%); */
+    transform: translateY(245%);
 }
 
 .description-name {
@@ -108,4 +109,9 @@ main header {
     height: 24px;
     fill: #1da1f2;
     /* transform: translateX(-15px) translateY(-8px); */
+}
+
+.location-icon {
+    height: 16px;
+    width: 16px;;
 }
