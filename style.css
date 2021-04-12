@@ -7,7 +7,8 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 608px 1fr;
+    grid-template-columns: minmax(1px, 1fr) 4fr 608px 4fr minmax(1px, 1fr)
+    ;
     height: 100vh;
     width: 100vw;
 }
@@ -133,11 +134,35 @@ header {
     color: black;
 }
 
-.detail-margin {
-    margin-right: 12px;
-}
-
 .detail-margin span a {
     text-decoration: none;
     color: #1da1f2;
 }
+
+.user-birthday {
+    margin-bottom: 8px;
+}
+
+.follow-tally {
+    margin-right: 20px;
+}
+
+.tweet-navigation {
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: #596a79;
+    height: 100%;
+}
+
+.tweet-navigation li {
+    border-bottom: 1px solid #6f819238;
+    height: 100%;
+    width: 100%;
+    place-content: center;
+    display: grid;
+    padding: 16px 0;
+}
+
