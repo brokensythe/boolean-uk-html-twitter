@@ -77,6 +77,7 @@ header {
 
 .user-description{
     position: relative;
+    color: #6f8192;
 }
 
 .user-description button {
@@ -104,6 +105,7 @@ header {
 .username h2 {
     font-size: 21px;
     font-weight: 800;
+    color: black;
 }
 
 .username svg {
@@ -113,5 +115,29 @@ header {
 }
 
 .handle {
-    color: #99a6b2;
+    color: #6f8192;
+}
+
+.user-comment {
+    margin: 10px 0;
+    color: #000;
+}
+
+.user-description-icons {
+    height: 19px;
+    width: 19px;
+    fill: #6f8192;
+}
+
+.user-description strong {
+    color: black;
+}
+
+.detail-margin {
+    margin-right: 12px;
+}
+
+.detail-margin span a {
+    text-decoration: none;
+    color: #1da1f2;
 }
