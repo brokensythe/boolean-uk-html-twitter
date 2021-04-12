@@ -7,80 +7,81 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 1fr 608px 1fr;
     height: 100vh;
     width: 100vw;
-
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 100%);
-    /* position: relative; */
+    border-left: 1px solid #f2f4f5;
+    border-right: 1px solid #f2f4f5;
 }
 
-main header {
+header {
     display: grid;
-    grid-template-columns: 38.4px minmax(auto, 100px) 32px;
-    place-items: center;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-    padding: 2px 16px;
+    grid-template-columns: 56px 542px;
+    height: 53px;
+    gap: 10px;
 }
 
 .left-arrow {
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
     fill: #1da1f2;
+    align-self: center;
+    justify-self: center;
 }
 
-.main-heading {
+.header-contents {
+    display: grid;
+    grid-template: 
+        "heading-username header-tick . " 27px
+        "user-tweets . . " 16px /
+        80px 26px auto;
+    align-content: center;
+}
+
+.header-contents h2 {
+    grid-area: heading-username;
     font-size: 21px;
     font-weight: 800;
-    display: grid;
 }
-
-.user-tweets {
+.header-contents svg {
+    grid-area: header-tick;
+    fill: #1da1f2;
+}
+.header-contents p {
+    grid-area: user-tweets;
     font-size: 13px;
     color: #697c8d;
-    font-weight: normal;
 }
 
-.header-tick {
-    width: 24px;
-    height: 24px;
-    fill: #1da1f2;
-    transform: translateX(-15px) translateY(-8px);
+.banner {
+    position: relative;
 }
 
 .banner-picture {
     width: 100%;
-}
-
-.user-description{
-    display: grid;
-    transform: translateY(-136px);
-}
-
-.description-top-content{
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 136px;
+    object-fit: cover;
 }
 
 .profile-picture {
-    height: 100%;
-    width: 100%;
-    border: 4px solid #fff;
+    height: 145px;
+    width: 145px;
     border-radius: 50%;
-    /* transform: translateY(-50%); */
+    border: 4px solid #fff;
+    position: absolute;
+    bottom: -67px;
+    left: 12px;
 }
 
-.follow-button {
-    width: 19%;
-    height: 28%;
-    justify-self: right;
+.user-description{
+    position: relative;
+}
+
+.user-description button {
+    width: 78px;
+    height: 40px;
     color: #1da1f2;
     font-size: 15px;
     font-weight: 700;
@@ -88,30 +89,29 @@ main header {
     background-color: #fff;
     border: 1px solid #1da1f2;
     border-radius: 50px;
-    transform: translateY(245%);
+    position: absolute;
+    top: -58px;
+    right: 16px;
 }
 
-.description-name {
+.username {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 78px auto;
+    margin-top: 68px;
+}
+
+.username h2 {
     font-size: 21px;
     font-weight: 800;
-    display: inline-grid;
-    /* transform: translateY(-190%); */
+}
+
+.username svg {
+    height: 27px;
+    width: 27px;
+    fill: #1da1f2
 }
 
 .handle {
-    font-size: 15px;
-    color: #697c8d;
-    font-weight: normal;
-}
-
-.description-tick {
-    width: 24px;
-    height: 24px;
-    fill: #1da1f2;
-    /* transform: translateX(-15px) translateY(-8px); */
-}
-
-.location-icon {
-    height: 16px;
-    width: 16px;;
+    color: #99a6b2;
 }
